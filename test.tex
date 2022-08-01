@@ -1,5 +1,7 @@
-\documentclass{Report}
-\initReport{dutch}
+\documentclass{SimpleLatex}
+
+\SetLanguage{dutch}
+\SetFont{Open Dyslexic}
 
 \begin{document}
 
@@ -24,7 +26,31 @@ First document. This is a simple example, with no
 \Chapter*{aca}
 \Chapter{ada}
 
+\begin{CodeBlockPython}[10]
+def function(parameter):
+    variable = value
+    print("string")
+
+class Class:
+    def __init__(self):
+        self.variable = value
+        
+\end{CodeBlockPython}
+
+\begin{CodeBlockC}[5]
+#include <stdio.h>
+
+int main() {
+    int variable = 5;
+
+    printf("Variable_name: %i", variable)
+}
+\end{CodeBlockC}
+
+\begin{CodeBlockBash}[5]
+for f in ./STL/*.stl; do
+    assimp export "$f" "$(echo $f | sed 's/STL\(.*\)stl/STEP\1stp/g')" -fstp
+done
+\end{CodeBlockBash}
 
 \end{document}
-
-

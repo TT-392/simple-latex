@@ -5,11 +5,30 @@
 
 \begin{document}
 
+\definecolor{mygray}{rgb}{0.8,0.8,0.8}
+    \lstset{frame=tb,
+    language=Bash,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{deepblue},
+    commentstyle=\color{},
+    stringstyle=\color{mauve},
+    emph={calcAzimuth},
+    emphstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3
+}
+
+
 \tableofcontents
-First document. This is a simple example, with no 
-extra parameters or packages included.
-First document. This is a simple example, with no 
-First document. This is a simple example, with no 
+This is \colorbox{mygray}{\lstinline|echo a|}
+
 \Chapter*{aaa}
 \Section*{aaa1}
 \Section{aaa2}
@@ -26,7 +45,7 @@ First document. This is a simple example, with no
 \Chapter*{aca}
 \Chapter{ada}
 
-\begin{CodeBlockPython}[10]
+\begin{CodeBlock}[10]{Python}
 def function(parameter):
     variable = value
     print("string")
@@ -35,9 +54,9 @@ class Class:
     def __init__(self):
         self.variable = value
         
-\end{CodeBlockPython}
+\end{CodeBlock}
 
-\begin{CodeBlockC}[5]
+\begin{CodeBlock}[5]{C}
 #include <stdio.h>
 
 int main() {
@@ -45,12 +64,12 @@ int main() {
 
     printf("Variable_name: %i", variable)
 }
-\end{CodeBlockC}
+\end{CodeBlock}
 
-\begin{CodeBlockBash}[5]
+\begin{CodeBlock}{Bash}
 for f in ./STL/*.stl; do
     assimp export "$f" "$(echo $f | sed 's/STL\(.*\)stl/STEP\1stp/g')" -fstp
 done
-\end{CodeBlockBash}
+\end{CodeBlock}
 
 \end{document}

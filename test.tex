@@ -2,6 +2,8 @@
 
 \SetLanguage{dutch}
 \SetFont{Open Dyslexic}
+\SetBibFile{sample.bib}
+
 
 \begin{document}
 
@@ -52,5 +54,9 @@ for f in ./STL/*.stl; do
     assimp export "$f" "$(echo $f | sed 's/STL\(.*\)stl/STEP\1stp/g')" -fstp
 done
 \end{CodeBlock}
+Let's cite! Einstein's journal paper \cite{einstein} and Dirac's
+book \cite{dirac} are physics-related items. 
+\printbibliography
+
 
 \end{document}

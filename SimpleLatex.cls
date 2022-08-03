@@ -1,5 +1,6 @@
 % TODO: 
-% citations
+% justified text 
+% get rid of page breaks
 
 %\LoadClass[12pt,DIV14,BCOR10mm,a4paper,headsepline,headinclude,english,bibliography=totocnumbered]{scrreprt}
 
@@ -7,7 +8,13 @@
 
 \input{lib/codeBlocks.tex}
 
+\usepackage[style=apa,backend=biber]{biblatex}
+
 % Init functions
+\newcommand\SetBibFile[1] {
+    \addbibresource{#1}
+}
+
 \newcommand\SetLanguage[1] {
     \usepackage[#1]{babel}
 }

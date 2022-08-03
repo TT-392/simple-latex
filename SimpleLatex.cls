@@ -6,7 +6,7 @@
 
 \LoadClass[12pt,DIV14]{scrreport}
 
-\input{lib/codeBlocks.tex}
+\include{lib/codeBlocks.tex}
 
 \usepackage[style=apa,backend=biber]{biblatex}
 

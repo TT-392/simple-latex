@@ -7,8 +7,15 @@
 \LoadClass[12pt,DIV14]{scrreport}
 
 \include{lib/codeBlocks.tex}
+\include{lib/text.tex}
 
 \usepackage[style=apa,backend=biber]{biblatex}
+
+\newcommand\SetJustify[1]{
+    \ifthenelse{\equal{#1}{False}}
+    {\usepackage[document]{ragged2e}}
+    {}
+}
 
 % Init functions
 \newcommand\SetBibFile[1] {

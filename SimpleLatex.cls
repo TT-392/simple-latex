@@ -6,6 +6,11 @@
 
 \LoadClass[12pt,DIV14]{scrreport}
 
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\setcounter{secnumdepth}{3}
 \include{lib/codeBlocks.tex}
 \include{lib/text.tex}
 

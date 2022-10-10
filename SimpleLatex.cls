@@ -4,15 +4,38 @@
 
 %\LoadClass[12pt,DIV14,BCOR10mm,a4paper,headsepline,headinclude,english,bibliography=totocnumbered]{scrreprt}
 
-\LoadClass[12pt,DIV14]{scrreport}
+%\LoadClass[12pt,DIV14]{scrreport}
+\LoadClass[11pt,a4paper,dutch]{report}
+
+
+\usepackage{csquotes}
+
+\usepackage[margin=1in]{geometry}
+%\geometry{textwidth=16cm}
 
 \usepackage{float}
+\usepackage{wrapfig}
+\usepackage{tabularx}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\vspace{-50pt}\Huge\bfseries}
+  {}
+  {0pt}
+  {\thechapter.\ }
+
+\titleformat{name=\chapter,numberless}[display]
+  {\vspace{-50pt}\Huge\bfseries}
+  {}
+  {0pt}
+  {}
+
+
 \setcounter{secnumdepth}{3}
-\include{lib/codeBlocks.tex}
-\include{lib/text.tex}
+\input{simple_latex/lib/codeBlocks.tex}
+\input{simple_latex/lib/text.tex}
 
 \usepackage[style=apa,backend=biber]{biblatex}
 
@@ -51,10 +74,12 @@
 % General purpose functions
 \NewDocumentCommand\Chapter{sm}{\IfBooleanTF#1
   {
+      %\vspace{-3cm}
       \chapter*{#2\markboth{#2}{}}
       \addcontentsline{toc}{chapter}{#2}
   }%
   {
+      %\vspace{-3cm}
       \chapter{#2}
   }% 
 }

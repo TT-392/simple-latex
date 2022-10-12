@@ -35,7 +35,7 @@
 
 \setcounter{secnumdepth}{3}
 \input{simple_latex/lib/codeBlocks.tex}
-\input{simple_latex/lib/text.tex}
+%\input{simple_latex/lib/text.tex}
 
 \usepackage[style=apa,backend=biber]{biblatex}
 

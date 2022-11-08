@@ -18,6 +18,7 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage[table]{xcolor}
 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]

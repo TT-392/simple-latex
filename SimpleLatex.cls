@@ -13,6 +13,7 @@
 \usepackage[margin=1in]{geometry}
 %\geometry{textwidth=16cm}
 
+\usepackage{caption}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{tabularx}

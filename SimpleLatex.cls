@@ -18,6 +18,10 @@
 \usepackage{wrapfig}
 \usepackage{tabularx}
 \usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+
 \graphicspath{ {./images/} }
 \usepackage[table]{xcolor}
 
